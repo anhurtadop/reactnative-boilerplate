@@ -3,16 +3,17 @@ module.exports = function (api) {
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      'module:react-native-dotenv',
-      'module-resolver',
-      {
-        cwd: 'babelrc',
-        root: ['./'],
-        extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
-        alias: {
-          '@': './src/',
+      [
+        'module-resolver',
+        {
+          cwd: 'babelrc',
+          root: ['./'],
+          extensions: ['.ios.js', '.android.js', '.js', '.ts', '.tsx', '.json'],
+          alias: {
+            '@': './src/',
+          },
         },
-      },
+      ],
     ],
   };
 };

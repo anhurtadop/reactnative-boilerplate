@@ -9,7 +9,7 @@ import exampleReducer from './example/reducer';
 import allSagas from './sagas';
 
 const rootReducer = combineReducers({
-  exampleReducer,
+  example: exampleReducer,
 });
 
 const persistConfig: PersistConfig<ReturnType<typeof rootReducer>> = {
@@ -47,10 +47,10 @@ const persistor = persistStore(store);
 const getPersistor = () => persistor;
 const getStore = () => store;
 const getState = () => {
-  return store.getState();
+  return store.getState().root;
 };
 
 export { getPersistor, getState, getStore };
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = ReturnType<typeof getState>;
 export type AppDispatch = typeof store.dispatch;
