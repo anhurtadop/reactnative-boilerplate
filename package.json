@@ -13,7 +13,6 @@
     "@react-native-async-storage/async-storage": "^2.0.0",
     "@reduxjs/toolkit": "^2.2.7",
     "axios": "^1.7.7",
-    "dotenv": "^16.4.5",
     "expo": "~51.0.28",
     "expo-status-bar": "~1.12.1",
     "react": "18.2.0",
@@ -26,8 +25,10 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@react-native/eslint-config": "^0.75.3",
+    "@types/node": "^22.6.1",
     "@types/react": "~18.2.45",
     "@types/redux-logger": "^3.0.13",
+    "babel-plugin-module-resolver": "^5.0.2",
     "eslint": "^8.57.0",
     "eslint-config-expo": "^7.1.2",
     "eslint-config-prettier": "^9.1.0",
