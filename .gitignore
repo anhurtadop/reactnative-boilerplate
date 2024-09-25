@@ -37,3 +37,6 @@ yarn.lock
 
 # typescript
 *.tsbuildinfo
+
+## random windows garbage
+%ProgramData%/Microsoft/**
