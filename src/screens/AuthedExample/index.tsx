@@ -9,7 +9,7 @@ import styles from './styles';
 export interface AuthedExampleProps {}
 const AuthedExample: React.FC<AuthedExampleProps> = () => {
   const { dispatchAction: dispatchGetTime, busy: busyGetTime } = useAwaitableSagaAction(getTime);
-  const [timeString, setTimeString] = useState('');
+  const [timeString, setTimeString] = useState('The api this button calls is super slow to respond');
   const dispatch = useDispatch();
   return (
     <View style={styles.container}>
@@ -26,6 +26,8 @@ const AuthedExample: React.FC<AuthedExampleProps> = () => {
           const result = await dispatchGetTime();
           if (result.ok && result.data) {
             setTimeString(JSON.stringify(result.data));
+          } else {
+            setTimeString(String(result.message));
           }
         }}
         title="Get Time"
