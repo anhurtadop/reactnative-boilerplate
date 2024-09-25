@@ -1,8 +1,8 @@
 import { put, takeLatest } from 'redux-saga/effects';
-import { exampleAction } from './action';
+import { exampleAction, exampleActionAsync } from './action';
 
 function* exampleSaga({ payload }: ReturnType<typeof exampleAction>) {
-  yield put(exampleAction(payload));
+  yield put(exampleActionAsync(payload));
 }
 
 export function* watchExample() {

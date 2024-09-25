@@ -28,9 +28,7 @@ const persistedReducer = persistReducer(persistConfig, rootReducer);
 const sagaMiddleware = createSagaMiddleware();
 
 const store = configureStore({
-  reducer: {
-    root: persistedReducer,
-  },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: false,
@@ -47,7 +45,7 @@ const persistor = persistStore(store);
 const getPersistor = () => persistor;
 const getStore = () => store;
 const getState = () => {
-  return store.getState().root;
+  return store.getState();
 };
 
 export { getPersistor, getState, getStore };

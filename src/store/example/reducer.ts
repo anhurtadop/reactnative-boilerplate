@@ -1,12 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { exampleActionAsync } from './action';
+import { exampleActionAsync, setAuth } from './action';
 
 export interface ExampleState {
   name: string;
+  isAuth?: boolean;
 }
 
 const initialState: ExampleState = {
   name: 'example',
+  isAuth: false,
 };
 
 const slice = createSlice({
@@ -14,10 +16,15 @@ const slice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(exampleActionAsync, (state, { payload }) => ({
-      ...state,
-      name: payload,
-    }));
+    builder
+      .addCase(exampleActionAsync, (state, { payload }) => ({
+        ...state,
+        name: payload,
+      }))
+      .addCase(setAuth, (state, { payload }) => ({
+        ...state,
+        isAuth: payload,
+      }));
   },
 });
 
