@@ -2,24 +2,26 @@ import useAwaitableSagaAction from '@/hooks/useAwaitableSagaAction';
 import { getTime, setAuth } from '@/store/example/action';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Button, Text, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import styles from './styles';
 
 export interface AuthedExampleProps {}
 const AuthedExample: React.FC<AuthedExampleProps> = () => {
+  const { t } = useTranslation();
   const { dispatchAction: dispatchGetTime, busy: busyGetTime } = useAwaitableSagaAction(getTime);
-  const [timeString, setTimeString] = useState('The api this button calls is super slow to respond');
+  const [timeString, setTimeString] = useState(t('slow-to-respond'));
   const dispatch = useDispatch();
   return (
     <View style={styles.container}>
       <StatusBar style="auto" />
-      <Text>SIGNED IN</Text>
+      <Text>{t('signed-in')}</Text>
       <Button
         onPress={() => {
           dispatch(setAuth(false));
         }}
-        title="Sign out"
+        title={t('sign-out-button')}
       />
       <Button
         onPress={async () => {
@@ -30,10 +32,12 @@ const AuthedExample: React.FC<AuthedExampleProps> = () => {
             setTimeString(String(result.message));
           }
         }}
-        title="Get Time"
+        title={t('get-time-button')}
         disabled={busyGetTime}
       />
-      <Text>TIME STRING: {timeString}</Text>
+      <Text>
+        {t('time-string')} {timeString}
+      </Text>
     </View>
   );
 };

@@ -1,31 +1,33 @@
 import { exampleAction, setAuth } from '@/store/example/action';
 import { selectExampleName } from '@/store/selectors';
 import { StatusBar } from 'expo-status-bar';
+import { useTranslation } from 'react-i18next';
 import { Button, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles';
 
 export interface ExampleProps {}
 const Example: React.FC<ExampleProps> = () => {
+  const { t } = useTranslation();
   const name = useSelector(selectExampleName);
   const dispatch = useDispatch();
   return (
     <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>{t('start-text')}</Text>
       <StatusBar style="auto" />
       <Button
         onPress={() => {
           const newName = getRandomName();
           dispatch(exampleAction(newName));
         }}
-        title="Change name"
+        title={t('change-name-button')}
       />
       <Text>{name}</Text>
       <Button
         onPress={() => {
           dispatch(setAuth(true));
         }}
-        title="Sign in"
+        title={t('sign-in-button')}
       />
     </View>
   );

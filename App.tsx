@@ -6,6 +6,8 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import '@/utils/i18n';
+
 const styles = StyleSheet.create({
   safeArea: {
     flex: 1,

@@ -1,0 +1,11 @@
+{
+  "start-text": "Open up App.tsx to start working on your app!",
+  "change-name-button": "Change name",
+  "signed-in": "SIGNED IN",
+  "signed-out": "SIGNED OUT",
+  "sign-in-button": "Sign in",
+  "sign-out-button": "Sign out",
+  "get-time-button": "Get Time",
+  "time-string": "TIME STRING: ",
+  "slow-to-respond": "The api this button calls is super slow to respond"
+}
