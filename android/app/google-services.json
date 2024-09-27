@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "390935335672",
+    "project_id": "boilerplate-react-native-5f521",
+    "storage_bucket": "boilerplate-react-native-5f521.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:390935335672:android:7f8b7dd36112da6d0e610d",
+        "android_client_info": {
+          "package_name": "com.grandmarules.patient"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBK43TDUQVRu2dk7fIzssErwaE8tyXxygg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
