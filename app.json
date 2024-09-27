@@ -2,6 +2,7 @@
   "expo": {
     "name": "grandma-patient",
     "slug": "grandma-patient",
+    "scheme": "grandma-patient",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,7 +20,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.anonymous.grandmapatient"
+      "package": "com.grandmarules.patient"
     },
     "web": {
       "favicon": "./assets/favicon.png"

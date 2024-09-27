@@ -1,5 +1,7 @@
 import useAwaitableSagaAction from '@/hooks/useAwaitableSagaAction';
+import { StackParamList } from '@/router/Stacks/MainStack';
 import { getTime, setAuth } from '@/store/example/action';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
@@ -7,7 +9,7 @@ import { Button, Text, View } from 'react-native';
 import { useDispatch } from 'react-redux';
 import styles from './styles';
 
-export interface AuthedExampleProps {}
+export interface AuthedExampleProps extends NativeStackScreenProps<StackParamList> {}
 const AuthedExample: React.FC<AuthedExampleProps> = () => {
   const { t } = useTranslation();
   const { dispatchAction: dispatchGetTime, busy: busyGetTime } = useAwaitableSagaAction(getTime);
@@ -42,4 +44,4 @@ const AuthedExample: React.FC<AuthedExampleProps> = () => {
   );
 };
 
-export default AuthedExample;
+export default AuthedExample as React.FC;

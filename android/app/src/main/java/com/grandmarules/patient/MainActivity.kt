@@ -1,4 +1,4 @@
-package com.anonymous.grandmapatient
+package com.grandmarules.patient
 
 import android.os.Build
 import android.os.Bundle

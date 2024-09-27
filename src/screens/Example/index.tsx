@@ -1,12 +1,15 @@
+import { StackParamList } from '@/router/Stacks/MainStack';
 import { exampleAction, setAuth } from '@/store/example/action';
 import { selectExampleName } from '@/store/selectors';
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { StatusBar } from 'expo-status-bar';
+import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button, Text, View } from 'react-native';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles';
 
-export interface ExampleProps {}
+export interface ExampleProps extends NativeStackScreenProps<StackParamList> {}
 const Example: React.FC<ExampleProps> = () => {
   const { t } = useTranslation();
   const name = useSelector(selectExampleName);
@@ -57,4 +60,4 @@ const names = [
 ];
 const getRandomName = () => names[Math.floor(Math.random() * names.length)];
 
-export default Example;
+export default Example as React.FC;

@@ -1,13 +1,9 @@
-import { selectExampleIsAuth } from '@/store/selectors';
-import { useSelector } from 'react-redux';
-import PrivateStack from '../Stacks/PrivateStack';
-import PublicStack from '../Stacks/PublicStack';
+import MainStack from '../Stacks/MainStack';
 
 interface AppNavigationProps {}
 
 const AppNavigation: React.FC<AppNavigationProps> = () => {
-  const isAuth = useSelector(selectExampleIsAuth);
-  return <>{isAuth ? <PrivateStack /> : <PublicStack />}</>;
+  return <MainStack />;
 };
 
 export default AppNavigation;

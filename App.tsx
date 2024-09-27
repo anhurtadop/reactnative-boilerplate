@@ -6,6 +6,7 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 
+import { DeepLinkConfig } from '@/utils/deeplinks';
 import '@/utils/i18n';
 
 const styles = StyleSheet.create({
@@ -18,7 +19,7 @@ const styles = StyleSheet.create({
 export default function App() {
   return (
     <SafeAreaProvider>
-      <NavigationContainer>
+      <NavigationContainer linking={DeepLinkConfig}>
         <Provider store={getStore()}>
           <PersistGate persistor={getPersistor()} loading={null}>
             <SafeAreaView style={styles.safeArea}>

@@ -1,7 +1,11 @@
 import AuthedExample from '@/screens/AuthedExample';
 import { createNativeStackNavigator, NativeStackNavigationOptions } from '@react-navigation/native-stack';
 
-const Stack = createNativeStackNavigator();
+export type PrivateStackParamList = {
+  Home: undefined;
+};
+
+const Stack = createNativeStackNavigator<PrivateStackParamList>();
 const SCREEN_OPTIONS: NativeStackNavigationOptions = {
   headerShown: false,
 };
