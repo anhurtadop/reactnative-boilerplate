@@ -10,5 +10,6 @@
   "slow-to-respond": "The api this button calls is super slow to respond",
   "go-home-button": "Go home",
   "screen-only-deeplinks": "This screen can only be reached through deeplinking",
-  "passed-params": "Passed params"
+  "passed-params": "Passed params",
+  "get-token-button": "Get token for notifications"
 }
