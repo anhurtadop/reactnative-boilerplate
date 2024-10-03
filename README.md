@@ -1,6 +1,33 @@
-# grandma-patient
+<h1 align="center">React Native Boilerplate</h1>
 
-Mobile App (Patients) for Grandma Rules Project
+<p align="center">
+    <img src="https://reactnative.dev/img/header_logo.svg" height="128">
+</p>
+
+This repository provides a boilerplate for creating a mobile app using React Native, including support for Redux and i18n.
+
+## Installation
+
+```bash
+$ npm install
+```
+
+## First, run the development server:
+
+```
+$ npm run start
+```
+
+## Features
+
+To learn more about React Native, take a look at the following resources:
+
+- Redux Toolkit for state management.
+- Redux Saga for handling side effects in a scalable manner.
+- i18next for internationalization.
+- Prettier and ESLint for code formatting and linting.
+- Commitlint and Husky for ensuring commit message standards.
+- Sass support for styling.
 
 ## Testing deeplinking with ADB
 
@@ -29,3 +56,7 @@ example formed command:
 ![Screenshot of the result of running the command to fire the app through a deeplink](docs/adb-deeplinking.png)
 
 Note that in the example the **'&'** symbol in the parameters is escaped ('\\&'), this is due to the ADB and is not necessary when creating a deeplink normally.
+
+## Requirements
+
+- Node.js version 20 or higher.
