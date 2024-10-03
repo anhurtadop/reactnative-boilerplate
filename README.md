@@ -41,7 +41,7 @@ _note: if the adb command does not work, [you may need to setup your paths.](htt
 
 > adb devices
 
-![Screenshot of a console showing the results of the command 'adb devices'](docs/adb-devices.png)
+![Screenshot of a console showing the results of the command 'adb devices'](public/docs/adb-devices.png)
 
 **[schema]** is the schema setup in the [app.json file if using expo](app.json), or the [android manifest file](android/app/src/main/AndroidManifest.xml)
 
@@ -53,7 +53,7 @@ example formed command:
 
 > adb -s emulator-5554 shell 'am start -W -a android.intent.action.VIEW -d "grandma-patient://PublicStack/Deeplinked?name=Nancy\&anotherParam=this%20is%20extra"'
 
-![Screenshot of the result of running the command to fire the app through a deeplink](docs/adb-deeplinking.png)
+![Screenshot of the result of running the command to fire the app through a deeplink](public/docs/adb-deeplinking.png)
 
 Note that in the example the **'&'** symbol in the parameters is escaped ('\\&'), this is due to the ADB and is not necessary when creating a deeplink normally.
 
