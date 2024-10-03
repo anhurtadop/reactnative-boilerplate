@@ -1,6 +1,23 @@
 {
-  "name": "grandma-patient",
+  "name": "reactnative-boilerplate",
   "version": "1.0.0",
+  "description": "Boilerplate for a Mobile App with React Native",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20.x",
+    "npm": ">=10.x"
+  },
+  "contributors": [
+    {
+      "name": "Anthony Hurtado",
+      "url": "https://github.com/anhurtadop"
+    },
+    {
+      "name": "Ricardo Rico",
+      "url": "https://github.com/PachotheElf"
+    }
+  ],
   "main": "expo/AppEntry.js",
   "scripts": {
     "start": "expo start",
@@ -49,6 +66,5 @@
     "prettier": "^3.3.3",
     "redux-logger": "^3.0.6",
     "typescript": "~5.3.3"
-  },
-  "private": true
+  }
 }
